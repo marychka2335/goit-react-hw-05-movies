@@ -7,8 +7,8 @@ import { Triangle } from 'react-loader-spinner';
 export const SharedLayout = () => {
   return (
     <Box>
-      <Box as="header" borderBottom="2px solid orange">
-        <Box as="nav" display="flex" gridGap={15}>
+      <Box as="header" borderBottom="1px solid blue">
+        <Box as="nav" display="flex" gridGap={20}>
           <NavItem to="/">Home</NavItem>
           <NavItem to="movies">Movies</NavItem>
         </Box>
@@ -20,7 +20,7 @@ export const SharedLayout = () => {
             <Triangle
               height="80"
               width="80"
-              color="orange"
+              color="blue"
               ariaLabel="triangle-loading"
               wrapperStyle={{}}
               wrapperClassName=""
@@ -41,11 +41,12 @@ const NavItem = styled(NavLink)`
   padding: 20px 0;
 
   &.active {
-    color: orange;
+    color: blue; 
+    
   }
 
   :hover:not(.active) {
-    color: orange;
+    color: navy;
   }
 `;
 

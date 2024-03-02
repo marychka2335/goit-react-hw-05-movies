@@ -36,7 +36,7 @@ const MoviesDetails = () => {
         pb={15}
         display="flex"
         gridGap={70}
-        borderBottom="2px solid orange"
+        borderBottom="1px solid navy"
       >
         <img
           src={`https://image.tmdb.org/t/p/w500${poster_path}`}
@@ -70,7 +70,7 @@ const MoviesDetails = () => {
         as="section"
         pt={15}
         pb={15}
-        borderBottom="2px solid orange"
+        borderBottom="1px solid navy"
         display="flex"
         alignItems="center"
         gridGap={10}
@@ -85,7 +85,7 @@ const MoviesDetails = () => {
             <Triangle
               height="80"
               width="80"
-              color="orange"
+              color="navy"
               ariaLabel="triangle-loading"
               wrapperStyle={{}}
               wrapperClassName=""
@@ -103,14 +103,14 @@ export default MoviesDetails;
 // style
 const NavItem = styled(NavLink)`
   color: black;
-  font-size: 24px;
+  font-size: 14px;
   text-decoration: underline;
 
   &.active {
-    color: orange;
+    color: navy;
   }
 
   :hover:not(.active) {
-    color: orange;
+    color: navy;
   }
 `;

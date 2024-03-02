@@ -21,11 +21,11 @@ export const CastChar = styled.p`
   padding-right: 5px;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: grey;
+  color: navy;
 `;
 export const CastName = styled.p`
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 200;
   color: black;
   padding-left: 5px;
   padding-right: 5px;

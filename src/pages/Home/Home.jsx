@@ -27,18 +27,18 @@ const Home = () => {
 
   return (
     <Box as="main">
-      <Box as="h1" fontSize={34} fontWeight={500} mt={15} mb={15}>
+      <Box as="h1" fontSize={25} fontWeight={600} mt={25} mb={25} >
         Trending today
       </Box>
 
       <TrendList>
-        {trends.map(({ title, id, poster_path, release_date }, index) => (
+        {trends.map(({ title, poster_path, release_date, id }, index) => (
           <TrendCard key={index}>
             <TitleLink to={`movies/${id}`} state={{ from: location }}>
               <img
-                src={`https://api.themoviedb.org/3/movie/movie_id/images${poster_path}`}
-                width={270}
-                alt=""
+          src={`https://image.tmdb.org/t/p/w500${poster_path}`}
+          width={230}
+          alt=""
               />
               <Title>{title}</Title>
             </TitleLink>
@@ -54,32 +54,3 @@ const Home = () => {
 };
 export default Home;
 
-// import { useEffect, useState } from 'react';
-// import { useLocation } from 'react-router-dom';
-// import { fetchTrendingMovies } from '../../apiService/apiService';
-// import { Films, Film, Wrapper } from './Home.styled';
-
-// export default function Home() {
-//   const [films, setFilms] = useState([]);
-//   const location = useLocation();
-
-//   useEffect(() => {
-//     fetchTrendingMovies()
-//       .then(response => setFilms([...response]))
-//       .catch(error => console.log(error.message));
-//   }, []);
-
-//   return (
-//     <Wrapper>
-//       <Films>
-//         {films.map(({ id, title }) => (
-//           <li key={id}>
-//             <Film to={`/movies/${id}`} state={{ from: location }}>
-//               {title}
-//             </Film>
-//           </li>
-//         ))}
-//       </Films>
-//     </Wrapper>
-//   );
-// }

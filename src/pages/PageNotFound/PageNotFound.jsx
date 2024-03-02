@@ -6,7 +6,7 @@ function PageNotFound() {
   return (
     <Container>
       {<IconError404 />}
-      <ErrorText>Sorry, this page has not found!</ErrorText>
+      <ErrorText>This page has not found!</ErrorText>
       <Link to="/">
         <BackToHomeBtn type="button">Back to homepage</BackToHomeBtn>
       </Link>

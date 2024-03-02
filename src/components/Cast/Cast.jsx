@@ -18,7 +18,7 @@ const Cast = () => {
     <Box as="section">
       <CastList>
         {cast.length === 0
-          ? "Sorry, we don't have information about this cast"
+          ? "Sorry, there in no any information about this cast"
           : cast.cast.map(({ name, character, profile_path }, index) => (
               <CastCard key={index}>
                 <img

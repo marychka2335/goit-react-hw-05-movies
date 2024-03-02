@@ -18,7 +18,7 @@ export const SearchFormBtn = styled.button`
   width: 48px;
   height: 48px;
   border: 0;
-  background-color: orange;
+  background-color: lightgrey;
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;
@@ -34,7 +34,7 @@ export const SearchFormInput = styled.input`
   display: inline-block;
   width: 100%;
   font: inherit;
-  font-size: 20px;
+  font-size: 14px;
   border: none;
   outline: none;
   padding-left: 5px;
@@ -59,7 +59,7 @@ export const SearchFormBtnLabel = styled.span`
 export const MovieList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
 `;
 export const MovieCard = styled.li`
   display: flex;
@@ -78,9 +78,10 @@ export const MovieDesc = styled.p`
   margin-top: 5px;
   margin-bottom: 10px;
   color: grey;
+  font-size: 10px;
 `;
 export const Title = styled.p`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   color: black;
   padding-left: 5px;
@@ -88,7 +89,7 @@ export const Title = styled.p`
   margin-top: 10px;
 `;
 export const TitleLink = styled(NavLink)`
-  /* font-size: 18px;
+  /* font-size: 16px;
   font-weight: 500;
   color: black;
   padding-left: 5px;

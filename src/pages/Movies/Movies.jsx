@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-// import { fetchMoviesBySearch } from ‘Services/Api’;
 import { useLocation, useSearchParams } from 'react-router-dom';
 import {
   MovieDesc,
@@ -10,6 +9,7 @@ import {
 } from './Movies.styled';
 import SearchFilms from './../../components/SearchForm/SearchForm';
 import { Box } from './../../components/Box';
+
 const Movies = () => {
   const [searchMovie, setSearchMovie] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');

@@ -14,7 +14,7 @@ const SearchFilms = ({ onSubmit }) => {
   const handleSubmit = e => {
     e.preventDefault();
     if (searchQuery.trim() === '') {
-      alert('Enter a name of the movie');
+      alert('Enter the name of the movie');
       return;
     }
     onSubmit(searchQuery);
