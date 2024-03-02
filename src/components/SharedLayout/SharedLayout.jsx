@@ -37,12 +37,12 @@ export const SharedLayout = () => {
 
 const NavItem = styled(NavLink)`
   color: black;
-  font-size: 28px;
+  font-size: 22px;
   padding: 20px 0;
 
   &.active {
     color: blue; 
-    
+
   }
 
   :hover:not(.active) {
@@ -50,20 +50,3 @@ const NavItem = styled(NavLink)`
   }
 `;
 
-// import { Outlet } from "react-router-dom";
-// import { Container, Header, HeaderLink, Navigation } from './SharedLayout.styled';
-// import { Suspense } from "react";
-
-// export default function SharedLayout() {
-//   return (
-//     <Container>
-//       <Header>
-//       <Navigation>
-//         <HeaderLink to='/'>Home</HeaderLink>
-//         <HeaderLink to='/movies'>Movies</HeaderLink>
-//       </Navigation>
-//     </Header>
-//    <Suspense fallback={<div>Loading...</div>}><Outlet /></Suspense>
-//     </Container>
-//   )
-// }

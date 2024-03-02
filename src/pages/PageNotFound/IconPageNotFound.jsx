@@ -1,4 +1,3 @@
-// import * as React from 'react';
 
 function IconError404(props) {
   return (

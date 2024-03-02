@@ -1,4 +1,3 @@
-// import * as React from 'react';
 
 export function IconMovieSearch(props) {
   return (
@@ -14,4 +13,3 @@ export function IconMovieSearch(props) {
   );
 }
 
-// export default IconMovieSearch;

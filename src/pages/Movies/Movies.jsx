@@ -45,7 +45,6 @@ const Movies = () => {
       .then(films => {
         console.log(films);
         setSearchMovie(films.results);
-        //       setLoading(false);
       })
       .catch(err => console.error(err));
   }, [searchQuery, page, urlValue]);

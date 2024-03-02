@@ -1,4 +1,3 @@
-// import * as React from 'react';
 
 export function IconArrowLeft(props) {
   return (
@@ -14,4 +13,3 @@ export function IconArrowLeft(props) {
   );
 }
 
-// export default IconArrowLeft;
