@@ -29,26 +29,9 @@ const Home = () => {
     <Box as="main">
       <Box as="h1" fontSize={34} fontWeight={500} mt={15} mb={15}>
         Trending today
-        <TrendList>
-        {trends.map(({ title, id, poster_path, release_date }, index) => (
-          <TrendCard key={index}>
-            <TitleLink to={`movies/${id}`} state={{ from: location }}>
-              <img
-                src={`https://api.themoviedb.org/3/movie/movie_id/images${poster_path}`}
-                width={270}
-                alt=""
-              />
-              <Title>{title}</Title>
-            </TitleLink>
-            <TrendDesc>
-              Release date: {new Date(release_date).toLocaleDateString()}
-            </TrendDesc>
-          </TrendCard>
-        ))}
-      </TrendList>
       </Box>
 
-      {/* <TrendList>
+      <TrendList>
         {trends.map(({ title, id, poster_path, release_date }, index) => (
           <TrendCard key={index}>
             <TitleLink to={`movies/${id}`} state={{ from: location }}>
@@ -64,18 +47,7 @@ const Home = () => {
             </TrendDesc>
           </TrendCard>
         ))}
-      </TrendList> */}
-       {/* <Wrapper> */}
-      <TrendList>
-        {trends.map(({ id, title }) => (
-          <li key={id}>
-            <TitleLink to={`/movies/${id}`} state={{ from: location }}>
-              {title}
-            </TitleLink>
-          </li>
-        ))}
       </TrendList>
-    {/* </Wrapper> */}
       <Outlet />
     </Box>
   );
