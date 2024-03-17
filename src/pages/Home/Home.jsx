@@ -4,14 +4,6 @@ import { useState, useEffect } from 'react';
 import { fetchMoviesTrends } from './../../Services/Api';
 import { MovieList } from './../../components/MovieList/MovieList'
 
-// import {
-//   TrendCard,
-//   TrendList,
-//   TitleLink,
-//   TrendDesc,
-//   Title,
-// } from './Home.styled';
-
 const Home = () => {
   const [trends, setTrends] = useState([]);
   const location = useLocation();

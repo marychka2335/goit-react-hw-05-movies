@@ -1,12 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
-// import {
-//   MovieDesc,
-//   Title,
-//   TitleLink,
-//   MovieCard,
-//   MovieList,
-// } from './Movies.styled';
 import { MovieList } from './../../components/MovieList/MovieList';
 import SearchFilms from './../../components/SearchForm/SearchForm';
 import { Box } from './../../components/Box';
