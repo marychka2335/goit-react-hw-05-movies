@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
-import {
-  MovieDesc,
-  Title,
-  TitleLink,
-  MovieCard,
-  MovieList,
-} from './Movies.styled';
+// import {
+//   MovieDesc,
+//   Title,
+//   TitleLink,
+//   MovieCard,
+//   MovieList,
+// } from './Movies.styled';
+import { MovieList } from './../../components/MovieList/MovieList';
 import SearchFilms from './../../components/SearchForm/SearchForm';
 import { Box } from './../../components/Box';
 
@@ -58,25 +59,8 @@ const Movies = () => {
     <Box as="main">
       <SearchFilms onSubmit={handleSubmit} />
       {searchMovie && (
-        <MovieList>
-          {searchMovie.map(
-            ({ title, id, poster_path, release_date }, index) => (
-              <MovieCard key={index}>
-                <TitleLink to={`${id}`} id={id} state={{ from: location }}>
-                  <img
-                    src={`https://image.tmdb.org/t/p/w500${poster_path}`}
-                    width={270}
-                    alt=""
-                  />
-                  <Title>{title}</Title>
-                </TitleLink>
-                <MovieDesc>
-                  Release date: {new Date(release_date).toLocaleDateString()}
-                </MovieDesc>
-              </MovieCard>
-            )
-          )}
-        </MovieList>
+        <MovieList films={searchMovie} state={{ from: location}} />
+          
       )}
     </Box>
   );
