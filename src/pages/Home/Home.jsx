@@ -23,9 +23,8 @@ const Home = () => {
       <Box as="h1" fontSize={25} fontWeight={600} mt={25} mb={25} >
         Trending today
       </Box>
-
       <MovieList films={ trends } state={{ from: location }} />
-     
+
       <Outlet />
     </Box>
   );

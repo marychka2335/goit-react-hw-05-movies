@@ -5,12 +5,14 @@ import { Box } from './../../components/Box';
 import { fetchMoviesDetails } from './../../Services/Api';
 import { Triangle } from 'react-loader-spinner';
 import { useRef } from 'react';
-import { TitleLink, BtnBack } from './../../pages/Home/Home.styled';
+import { TitleLink, BtnBack } from './../../components/MovieList/MovieList.styled';
+
+
 const MoviesDetails = () => {
   const [movie, setMovie] = useState(null);
   const { movieId } = useParams();
   const location = useLocation();
-  const backLinkRef = useRef(location.state?.from ?? '/movies');
+  const backLinkRef = useRef(location.state?.from ?? '/');
 
   console.log(backLinkRef);
   console.log(location);

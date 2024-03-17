@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { List, Card, TitleLink, TrendDesc, Title } from "./MovieList.styled";
+import { defaultImg } from "../../Services/Api";
 
 export const MovieList = ({ films }) => {
   const location = useLocation();
@@ -8,9 +9,9 @@ export const MovieList = ({ films }) => {
          <List>
         {films.map(({ title, poster_path, release_date, id }, index) => (
           <Card key={index}>
-            <TitleLink to={`movies/${id}`} state={{ from: location }}>
+            <TitleLink to={`/movies/${id}`} state={{ from: location }}>
               <img
-          src={`https://image.tmdb.org/t/p/w500${poster_path}`}
+          src={poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : defaultImg}
           width={230}
           alt=""
               />
@@ -25,4 +26,3 @@ export const MovieList = ({ films }) => {
   );
 };
 
-// export default MovieList;
