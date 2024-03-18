@@ -17,7 +17,7 @@ const Reviews = () => {
     <Box as="section">
       <Box as="ul" display="flex" flexDirection="column" gridGap={15} p={0}>
         {review.length === 0
-          ? "Sorry,there are no reviews for this movie"
+          ? <p>Sorry,there are no reviews for this movie</p>
           : review.results.map(({ author, content }, index) => (
               <li key={index}>
                 <h3>Author: {author}</h3>

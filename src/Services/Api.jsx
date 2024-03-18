@@ -1,12 +1,9 @@
 import axios from 'axios';
 import PropTypes from 'prop-types';
 axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
-// import { URLSearchParam } from './../pages/Movies/Movies';
-// import { Movies } from './../pages/Movies/Movies';
 
 const BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = 'fe65ae3947785f9cceedf502c682301b';
-// export const URL = `https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1&api_key=${API_KEY}&${URLSearchParam}`;
 
 export async function fetchMoviesTrends() {
   const trending = await axios.get(`trending/movie/day?api_key=${API_KEY}`);

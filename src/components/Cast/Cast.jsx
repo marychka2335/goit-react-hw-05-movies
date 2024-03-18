@@ -19,7 +19,7 @@ const Cast = () => {
     <Box as="section">
       <CastList>
         {cast.length === 0
-          ? 'Sorry, there in no any information about this cast'
+          ? <p>Sorry, there in no any information about this cast</p>
           : cast.cast.map(({ name, character, profile_path }, index) => (
               <CastCard key={index}>
               <img src={profile_path ? `https://image.tmdb.org/t/p/w500${profile_path}` : `${defaultImg}`} width={180} alt="poster" />
